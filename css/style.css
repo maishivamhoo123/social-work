@@ -34,6 +34,7 @@
 }
 .articles-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center; /* Center the articles horizontally */
     gap: 20px; /* Adjust the gap as needed */
