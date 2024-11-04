@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Image Selector</title>
+</head>
+<body>
+
+    <form action="http://localhost:8080/add-esgdocument" method="post">
+        <!-- Text Input Fields -->
+        <label for="input1">Heading</label>
+        <input type="text" id="input1" name="heading" ><br><br>
+
+        <label for="input2">para1</label>
+        <input type="text" id="input2" name="paraesg1" ><br><br>
+
+        <label for="input3">para2</label>
+        <input type="text" id="input3" name="paraesg2" ><br><br>
+
+        <label for="input4">li1</label>
+        <input type="text" id="input4" name="li1" ><br><br>
+
+        <label for="input5">li2</label>
+        <input type="text" id="input5" name="li2" ><br><br>
+
+        <label for="input6">li3</label>
+        <input type="text" id="input6" name="li3" ><br><br>
+
+        <!-- Image Selector -->
+        <label for="image">Select an image:</label>
+        <input type="text" id="image" name="Image1" accept="image/*" ><br><br>
+        <!-- <input type="hidden" id="imageBase64" name="imageBase64"> -->
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    </form>
+<!-- <script>document.getElementById('image').addEventListener('change', function() {
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onloadend = function() {
+            // Convert image file to Base64 and store in hidden input field
+            document.getElementById('imageBase64').value = reader.result;
+        }
+        reader.readAsDataURL(file); // Convert the file to base64
+    }
+});
+
+document.getElementById('esgForm').addEventListener('submit', function(event) {
+    // Optionally, you can add some validation here before submission
+    console.log('Form is submitting with image in Base64 format');
+});
+</script> -->
+
+</body>
+</html>

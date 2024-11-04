@@ -132,18 +132,79 @@
                 <p class="d-inline-block border rounded-pill py-1 px-3">workshops</p>
                 <h1>POSH workshop</h1>
             </div>
-    
+   
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="articles-container cl2">
-                    <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/mcdQfRk0Lco?si=gaM5rNPvfxv3GQt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/n8wS76JFxFo?si=gBrOnnvXKJIElMzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
-                    <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/i0kmjjCh858?si=qlzBd7fZ_XXFNXrh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/pK52YVEDoac?si=Qm_UP93a59HK4Zha" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe class="it  cl2"  width="365" height="365" src="https://www.youtube.com/embed/QPeja4OCFgg?si=riQJ6-mwYCttZgr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                
-                    <!-- <video class="it cl2"  width="400" height="400" src="/img/38048-415950712_small.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen autoplay></video> -->
+                <div id="editable-container" class="articles-container cl2">
+                    <!-- Media elements will be dynamically inserted here -->
                 </div>
-                    </div>
+            </div>
+            
+            <!-- <script>
+                // Function to create and append iframes or videos to the articles-container
+                function renderESGItems(data) {
+                    const container = document.querySelector('#editable-container');
+            
+                    // Clear the container before adding new elements
+                    container.innerHTML = '';
+                    console.log("data",data);
+                    
+            
+                    data.forEach(item => {
+                        let element;
+                        console.log("itemType", item.link);
+                        
+            
+                        // if (item.type === 'video') {
+                        //     // Create a video element
+                        //     element = document.createElement('video');
+                        //     element.className = 'it cl2';
+                        //     element.width = 400;
+                        //     element.height = 400;
+                        //     element.src = item.url;
+                        //     element.setAttribute('controls', true);
+                        //     element.setAttribute('autoplay', true);
+                        // } else 
+                        // if (item.type === 'iframe') {
+                        //     // Create an iframe element
+                            
+                            element = document.createElement('iframe');
+                            element.className = 'it cl2';
+                            element.width = 365;
+                            element.height = 365;
+                            element.src = item.link;
+                            element.title = "YouTube video player";
+                            element.frameBorder = 0;
+                            element.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+                            element.referrerPolicy = "strict-origin-when-cross-origin";
+                            element.allowFullscreen = true;
+                            console.log("element",element);
+                            
+
+                        // }
+            
+                        // Append the element to the container
+                        container.appendChild(element);
+                    });
+                }
+            
+                // Fetch data from the /add-esg endpoint and render it
+                fetch('http://localhost:8080/add-esg')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok ' + response.statusText);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        renderESGItems(data);
+                        console.log(data); // Log the data for debugging
+                    })
+                    .catch(error => {
+                        console.error('Error fetching ESG data:', error);
+                    });
+            </script> -->
+            
+                    
                     </div>
                     </div>
                     
@@ -156,12 +217,12 @@
             </div>
     
             <div class="row g-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="articles-container cl2">
-                    <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/mcdQfRk0Lco?si=gaM5rNPvfxv3GQt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div  id = "add-poshvideo"  class="articles-container cl2">
+                    <!-- <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/mcdQfRk0Lco?si=gaM5rNPvfxv3GQt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/n8wS76JFxFo?si=gBrOnnvXKJIElMzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
                     <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/i0kmjjCh858?si=qlzBd7fZ_XXFNXrh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <iframe class="it  cl2" width="365" height="365" src="https://www.youtube.com/embed/pK52YVEDoac?si=Qm_UP93a59HK4Zha" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <iframe class="it  cl2"  width="365" height="365" src="https://www.youtube.com/embed/QPeja4OCFgg?si=riQJ6-mwYCttZgr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe class="it  cl2"  width="365" height="365" src="https://www.youtube.com/embed/QPeja4OCFgg?si=riQJ6-mwYCttZgr6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                 </div>
                     </div>
                     </div>
@@ -240,6 +301,8 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="server/posting/esgpost.js"></script>
+    <script src="server/posting/addesgvideo.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

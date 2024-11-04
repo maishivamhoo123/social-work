@@ -55,7 +55,7 @@
 }
 
 .text-green{
-    color:  #025B40 !important;
+    color:  #1a0892 !important;
 }
 
 .footer a:hover {
@@ -544,6 +544,14 @@
 
 
 /* pages */
+.poshpara{
+    font-size: 30px;
+    gap: 20px;
+    margin-left: 2%;
+}
+.image-right{
+    margin-right: 2%;
+}
 .div2{
     margin-left: 20px;
 }
@@ -553,11 +561,18 @@
 
 .img2
 {
-	       max-width: 220px;
-               height: auto;
+	       max-width: 300px;
+               height: 300px;
+               margin-left: 2%;
              border: black;
 }
-
+.img2r
+{
+	       max-width: 300px;
+               height: 300px;
+               margin-left: 2%;
+             border: black;
+}
 .image-left, .image-right
 {
 	margin: 1em 0;
