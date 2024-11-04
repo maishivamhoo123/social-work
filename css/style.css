@@ -35,7 +35,7 @@
 .articles-container {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    
     justify-content: center; /* Center the articles horizontally */
     gap: 20px; /* Adjust the gap as needed */
     padding: 0 10px; /* Add padding to ensure even spacing on both sides */
